@@ -29,13 +29,20 @@ import androidx.compose.ui.unit.sp
 import com.example.chat.ui.NavGraphs
 import com.example.chat.ui.contacts.Contact
 import com.example.chat.ui.theme.ChatTheme
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 import com.ramcosta.composedestinations.DestinationsNavHost
 import com.ramcosta.composedestinations.annotation.Destination
 
 
 class MainActivity : ComponentActivity() {
+    private lateinit var auth: FirebaseAuth
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        auth = Firebase.auth
+
         setContent {
             ChatTheme {
                 // A surface container using the 'background' color from the theme

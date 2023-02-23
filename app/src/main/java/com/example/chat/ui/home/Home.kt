@@ -46,11 +46,11 @@ fun MainSecreen(nav : DestinationsNavigator){
                 contentDescription = ""
             )
 
-            Spacer(modifier = Modifier.padding(55.dp))
+            Spacer(modifier = Modifier.padding(65.dp))
 
             Text(modifier = Modifier, text = "Home", fontSize = 18.sp, fontWeight = FontWeight.Bold, color = Color.Black)
 
-            Spacer(modifier = Modifier.padding(55.dp))
+            Spacer(modifier = Modifier.padding(50.dp))
 
             FloatingActionButton(
                 shape = RoundedCornerShape(30.dp),

@@ -48,9 +48,9 @@ fun ChatScreen(nav: DestinationsNavigator) {
             chatContent(nav)
         }
 
-        Box(
-            contentAlignment = Alignment.TopCenter,
-            modifier = Modifier.fillMaxSize(),
+        Column(
+            modifier = Modifier
+                .weight(1f),
 
             ) {
 
@@ -68,16 +68,15 @@ fun ChatScreen(nav: DestinationsNavigator) {
             Box(
                 modifier = Modifier
                     .padding(end = 25.dp, bottom = 15.dp)
-                    .align(Alignment.BottomCenter)
+//                    .align(Alignment.Bottom)
                     .background(Color.Transparent)
             ) {
-
                 Row(
                     modifier = Modifier
                         .fillMaxWidth()
                         .height(55.dp),
                     horizontalArrangement = Arrangement.End,
-                    verticalAlignment = Alignment.CenterVertically
+                    verticalAlignment = Alignment.Bottom
 
                 ) {
 
@@ -131,12 +130,8 @@ fun ChatScreen(nav: DestinationsNavigator) {
                         )
                     }
                 }
-
             }
-
-
         }
-
     }
 }
 
@@ -213,9 +208,6 @@ fun chatContent(nav: DestinationsNavigator) {
 }
 
 
-
-
-
 @Composable
 fun Contact() {
 
@@ -224,41 +216,41 @@ fun Contact() {
             .fillMaxWidth(),
         horizontalArrangement = Arrangement.Start
     ) {
-        Column(modifier = Modifier
-            .fillMaxWidth()
+
+        Card(
+            modifier = Modifier.width(300.dp), shape = RoundedCornerShape(8.dp, 8.dp, 8.dp, 0.dp)
         ) {
-            Card() {
 
-                Text(
-                    modifier = Modifier,
-                    text = "gfdv,;d.;sd.c;'dsc",
-                    fontSize = 14.sp,
-                    color = Color(0xffff8a37)
-                )
-
-            }
-
+            Text(
+                modifier = Modifier
+                    .background(color = Color(0xffff8a37)),
+                text = "gfdvrfrfrgtgdscgfdvrfrfrgtgdscgfdvrfrfrgtgdscgfdvrfrfrgtgdscgfdvrfrfrgtgdscgfdvrfrfrgtgdscgfdvrfrfrgtgdscgfdvrfrfrgtgdscgfdvrfrfrgtgdscgfdvrfrfrgtgdscgfdvrfrfrgtgdscgfdvrfrfrgtgdscgfdvrfrfrgtgdscgfdvrfrfrgtgdscgfdvrfrfrgtgdscgfdvrfrfrgtgdscgfdvrfrfrgtgdscgfdvrfrfrgtgdscgfdvrfrfrgtgdscgfdvrfrfrgtgdscgfdvrfrfrgtgdscgfdvrfrfrgtgdsc",
+                fontSize = 18.sp,
+            )
         }
-
-
-        Spacer(modifier = Modifier.padding(10.dp))
-
-        Column(modifier = Modifier
-            .fillMaxWidth()
-        ) {
-            Card() {
-
-                Text(
-                    modifier = Modifier,
-                    text = "fdvfdvhgukukfgasdgr",
-                    fontSize = 14.sp,
-                    color = Color(0xff9A9A9A)
-                )
-
-            }
-
-        }
-
-
     }
+
+    Spacer(modifier = Modifier.height(10.dp))
+
+    Row(
+        modifier = Modifier
+            .fillMaxWidth(),
+        horizontalArrangement = Arrangement.End
+    ) {
+
+        Card(
+            modifier = Modifier.height(30.dp), shape = RoundedCornerShape(8.dp, 8.dp, 0.dp, 8.dp)
+        ) {
+
+            Text(
+                modifier = Modifier
+                    .background(color = Color(0xfff5f5f5)),
+                text = "fdvfdvhgukukfgasdgr",
+                fontSize = 16.sp,
+                color = Color.Black
+            )
+        }
+    }
+    Spacer(modifier = Modifier.height(10.dp))
+
 }
